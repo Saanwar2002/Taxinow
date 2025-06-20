@@ -163,7 +163,9 @@ export default function PassengerDashboardPage() {
               disabled={bookingPreference === 'specific_operator' && !selectedOperator}
             >
               <Link href={bookRideHref}>
-                <Car className="mr-2 h-5 w-5" /> Book a New Ride
+                <span className="flex items-center">
+                  <Car className="mr-2 h-5 w-5" /> Book a New Ride
+                </span>
               </Link>
             </Button>
           </div>
@@ -231,7 +233,9 @@ function FeatureCard({ title, description, icon: Icon, link, actionText }: Featu
       <CardContent className="text-center space-y-4">
         <p className="text-muted-foreground text-sm">{description}</p>
         <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
-          <Link href={link}>{actionText}</Link>
+          <Link href={link}>
+            <span>{actionText}</span>
+          </Link>
         </Button>
       </CardContent>
     </Card>
