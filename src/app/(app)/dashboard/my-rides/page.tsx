@@ -191,7 +191,7 @@ export default function MyRidesPage() {
       prevRides.map(r => r.id === selectedRideForRating.id ? { ...r, rating: currentRating } : r)
     );
 
-    let toastDescription = `You rated your ride ${currentRating} stars. (Ride ID: ${selectedRideForRating.displayBookingId || selectedRideForRating.id})`;
+    const toastDescription = `You rated your ride ${currentRating} stars. (Ride ID: ${selectedRideForRating.displayBookingId || selectedRideForRating.id})`;
     
     toast({
       title: "Rating Submitted (Mock)",
